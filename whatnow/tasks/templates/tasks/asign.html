@@ -1,0 +1,13 @@
+{% extends 'tasks/base.html' %} {% block content %}
+
+<div id="task">
+
+    <h2 class="h2">Asign task to user</h2>
+
+    <form method="POST" class="smallform">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit" name="Save" value="save" class="button" id="small">save</button>
+    </form>
+
+</div>
+{% endblock %}
